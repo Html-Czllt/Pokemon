@@ -24,17 +24,29 @@ function checkVisibility() {
     });
 
     // Verifica visibilidade dos cards
-    cards.forEach(card => {
+    cards.forEach((card, index) => {
         const cardTop = card.getBoundingClientRect().top;
         const cardHeight = card.offsetHeight;
         const cardVisibilityThreshold = windowHeight * 0.75;
 
         if (cardTop < cardVisibilityThreshold && (cardTop + cardHeight) > 0) {
-            card.classList.add('visible');
+            setTimeout(() => {
+                card.classList.add('visible');
+            }, index * 300); // Delay para cada card aparecer um pouco depois do anterior
         } else {
             card.classList.remove('visible');
         }
     });
+}
+
+// Função para mostrar ou esconder o botão de rolar para o topo
+function handleScroll() {
+    const scrollToTopButton = document.getElementById('scrollToTop');
+    if (window.scrollY > window.innerHeight / 2) { // Aparece a partir da Seção 2
+        scrollToTopButton.classList.add('show');
+    } else {
+        scrollToTopButton.classList.remove('show');
+    }
 }
 
 // Adiciona ou remove visibilidade ao rolar
@@ -50,15 +62,6 @@ window.addEventListener('load', () => {
         checkVisibility();
     }
 });
-
-// Função para mostrar ou esconder o botão de rolar para o topo
-function handleScroll() {
-    if (window.scrollY > window.innerHeight) {
-        document.getElementById('scrollToTop').classList.add('show');
-    } else {
-        document.getElementById('scrollToTop').classList.remove('show');
-    }
-}
 
 // Função para rolar suavemente até o topo
 function scrollToTop() {

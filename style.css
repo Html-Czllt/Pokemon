@@ -54,10 +54,6 @@ body {
     cursor: pointer;
 }
 
-.content {
-    padding: 0;
-}
-
 /* Seção Features com cor de fundo pastel */
 .features {
     display: flex;
@@ -66,7 +62,7 @@ body {
     padding: 2rem;
     margin: 0;
     min-height: 100vh;
-    background-color: #f0f8ff;
+    background-color: #f0f8ff; /* Cor pastel clara */
     box-sizing: border-box;
     position: relative;
 }
@@ -85,39 +81,38 @@ body {
     display: flex;
     flex-direction: column;
     width: 50%;
-    padding: 1rem 0; /* Padding ajustado para mover os cards mais para cima */
+    padding: 2rem 0;
     box-sizing: border-box;
 }
 
-/* Ajuste das margens dos cards */
 .card {
     background: white;
     border: 1px solid #ddd;
     border-radius: 8px;
     width: 100%;
     height: 150px;
-    margin: 1rem 0; /* Margem uniforme superior e inferior dos cards */
+    margin: 1rem 0; /* Margem superior e inferior dos cards */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transition: opacity 1s ease-in-out, transform 0.3s ease-in-out;
     transform: translateY(20px);
-    overflow: hidden;
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites do card */
+}
+
+/* Ajuste especial para o primeiro e último card */
+.cards .card:first-child {
+    margin-top: 7%; /* Remove margem superior do primeiro card */
+}
+
+.cards .card:last-child {
+    margin-bottom: 13%; /* Remove margem inferior do último card */
 }
 
 .card:hover {
     transform: translateY(0) scaleY(1.1); /* Expande o card para baixo */
 }
 
-/* Ajustes especiais para o primeiro e último card */
-.cards .card:first-child {
-    margin-top: 5%; /* Ajustado para colocar os cards mais para cima */
-}
-
-.cards .card:last-child {
-    margin-bottom: 5%; /* Ajustado para adicionar espaço no final */
-}
-
-/* Estilo para as seções adicionais */
+/* Seções Additional e Final */
 .additional, .final {
     display: flex;
     align-items: center;
@@ -150,11 +145,6 @@ body {
 
 #scrollToTop:hover {
     background-color: #0056b3; /* Cor do botão quando hover */
-}
-
-#scrollToTop span {
-    display: inline-block;
-    line-height: 1;
 }
 
 #scrollToTop.show {
