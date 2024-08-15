@@ -1,0 +1,120 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('sua-imagem-de-fundo.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%) blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message {
+    z-index: 1;
+}
+
+.message h1 {
+    color: black;
+    font-size: 4rem;
+    position: relative;
+}
+
+.message h1::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: black;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.message h1:hover::after {
+    width: 100%;
+}
+
+.message h1:hover {
+    cursor: pointer;
+}
+
+.content {
+    padding: 0; /* Removido padding para a área de conteúdo para garantir o alinhamento correto */
+}
+
+/* Seção Features com cor de fundo pastel */
+.features {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2rem; /* Padding adicionado para adicionar espaçamento interno */
+    margin: 0; /* Garantido que não há margem extra ao redor */
+    min-height: 100vh; /* Garante altura mínima da tela */
+    background-color: #f0f8ff; /* Cor pastel clara */
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Estilo para a área de texto */
+.text-section {
+    width: 40%;
+    margin-right: 2rem;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateY(20px);
+}
+
+/* Estilo para os cards */
+.cards {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 2rem 0; /* Padding superior e inferior para garantir espaçamento igual */
+    margin-top: 2rem; /* Margem superior para posicionar os cards mais para baixo */
+    box-sizing: border-box;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 1rem; /* Margem inferior dos cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(20px);
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites do card */
+}
+
+/* Ajuste para o efeito de expansão do card */
+.card:hover {
+    transform: translateY(0) scaleY(1.1); /* Expande o card para baixo */
+}
+
+/* Visibilidade das seções e dos elementos */
+.features.visible, .additional.visible, .final.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text-section.visible, .card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
