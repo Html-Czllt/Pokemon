@@ -1,50 +1,127 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Pokémon Mundo</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo-pokemon.png" alt="Logotipo Pokémon">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#pokemon">Pokémon</a></li>
+                    <li><a href="#treinadores">Treinadores</a></li>
+                    <li><a href="#jogos">Jogos</a></li>
+                    <li><a href="#noticias">Notícias</a></li>
+                    <li><a href="#comunidade">Comunidade</a></li>
+                    <li><a href="#loja">Loja</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <!-- Seção Hero -->
-    <section class="hero">
-        <div class="message">
-            <h1>Pokemon</h1>
+    <!-- Banner Principal -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Bem-vindo ao Pokémon Mundo – Onde a Aventura Começa!</h1>
         </div>
     </section>
 
-    <!-- Seção Features -->
-    <section class="features">
-        <div class="text-section">
-            <h2>Texto Informativo</h2>
-            <p>Informações relevantes sobre os cards...</p>
+    <!-- Seções do Site -->
+    <main>
+        <section id="pokemon" class="section-container">
+            <h2>Pokémon</h2>
+            <p>Explore o nosso Pokédex e conheça todos os Pokémon!</p>
+            <div class="gallery">
+                <img src="images/pokemon1.png" alt="Pokémon 1">
+                <img src="images/pokemon2.png" alt="Pokémon 2">
+                <img src="images/pokemon3.png" alt="Pokémon 3">
+            </div>
+        </section>
+
+        <section id="treinadores" class="section-container">
+            <h2>Treinadores</h2>
+            <p>Conheça os treinadores lendários e suas histórias.</p>
+            <div class="trainers-slider">
+                <!-- Slider com conteúdo dinâmico -->
+            </div>
+        </section>
+
+        <section id="jogos" class="section-container">
+            <h2>Jogos</h2>
+            <p>Descubra os jogos mais recentes e clássicos da franquia.</p>
+            <div class="games-list">
+                <div class="game-item">
+                    <img src="images/game1.jpg" alt="Jogo 1">
+                    <p>Pokémon Scarlet e Violet</p>
+                </div>
+                <div class="game-item">
+                    <img src="images/game2.jpg" alt="Jogo 2">
+                    <p>Pokémon Sword e Shield</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="noticias" class="section-container">
+            <h2>Notícias</h2>
+            <p>Fique atualizado com as últimas novidades e lançamentos.</p>
+            <div class="news-feed">
+                <!-- Notícias e artigos -->
+            </div>
+        </section>
+
+        <section id="comunidade" class="section-container">
+            <h2>Comunidade</h2>
+            <p>Participe de fóruns e eventos com outros fãs.</p>
+        </section>
+
+        <section id="loja" class="section-container">
+            <h2>Loja</h2>
+            <p>Compre produtos oficiais e exclusivos do Pokémon.</p>
+            <div class="store-items">
+                <div class="store-item">
+                    <img src="images/item1.jpg" alt="Produto 1">
+                    <p>Pelúcia de Pikachu</p>
+                </div>
+                <div class="store-item">
+                    <img src="images/item2.jpg" alt="Produto 2">
+                    <p>Camiseta Charizard</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#pokemon">Pokémon</a></li>
+                    <li><a href="#treinadores">Treinadores</a></li>
+                    <li><a href="#jogos">Jogos</a></li>
+                    <li><a href="#noticias">Notícias</a></li>
+                    <li><a href="#comunidade">Comunidade</a></li>
+                    <li><a href="#loja">Loja</a></li>
+                </ul>
+            </nav>
+            <p>&copy; 2024 Pokémon Mundo. Todos os direitos reservados.</p>
+            <div class="social-media">
+                <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+            </div>
         </div>
-        <div class="cards">
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-        </div>
-    </section>
+    </footer>
 
-    <!-- Seção Additional -->
-    <section class="additional">
-        <h2>Seção Adicional</h2>
-        <p>Conteúdo adicional...</p>
-    </section>
-
-    <!-- Seção Final -->
-    <section class="final">
-        <h2>Seção Final</h2>
-        <p>Conteúdo final...</p>
-    </section>
-
-    <!-- Botão de rolar para o início -->
-    <a href="#" id="scrollToTop" title="Voltar ao topo">
-        <span>&uarr;</span>
-    </a>
-
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
 </body>
 </html>
